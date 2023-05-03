@@ -1,8 +1,12 @@
-#include <iostream>
+/*
+ * @lc app=leetcode.cn id=977 lang=cpp
+ *
+ * [977] 有序数组的平方
+ */
 #include <vector>
 #include <cmath>
 using namespace std;
-
+// @lc code=start
 class Solution {
 public:
     vector<int> sortedSquares(vector<int>& nums) {
@@ -54,13 +58,5 @@ public:
         return res;
     }
 };
+// @lc code=end
 
-
-
-int main() {
-    Solution s;
-    vector<int> t{-1,2,2};
-    vector<int> v = s.sortedSquares(t);
-    
-    return 0;
-}
