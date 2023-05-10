@@ -10,6 +10,7 @@ using namespace std;
 // @lc code=start
 class Solution {
 public:
+    // 时间复杂度为O(n-m+1)
     vector<int> findAnagrams(string s, string p) {
         int s_len = s.length(), p_len = p.length();
         if (s_len < p_len || s_len == 0 || p_len == 0) return vector<int>(0);
