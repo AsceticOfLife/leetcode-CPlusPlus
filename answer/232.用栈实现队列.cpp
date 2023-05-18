@@ -5,26 +5,46 @@
  */
 
 // @lc code=start
+#include <stack>
+using std::stack;
+
 class MyQueue {
+private:
+    stack<int> stack1;
+    stack<int> stack2;
 public:
     MyQueue() {
 
     }
     
     void push(int x) {
-
+        stack1.push(x);
     }
     
     int pop() {
+        if (stack2.empty()) {
+            // 将栈1中的元素全部入栈2
+            while (!stack1.empty()) {
+                stack2.push(stack1.top());
+                stack1.pop();
+            }
+        }
 
+        int x = stack2.top();
+        stack2.pop();
+
+        return x;
     }
     
     int peek() {
-
+        int x = pop();
+        stack2.push(x);
+        
+        return x;
     }
     
     bool empty() {
-
+        return stack1.empty() && stack2.empty();
     }
 };
 
