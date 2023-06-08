@@ -62,7 +62,7 @@ public:
             st.pop();
 
             // 计算根节点的左右孩子是否为差值在1以内
-            if (abs(getDepth(node->left) - getDepth(node->right) > 1))
+            if (abs(getDepth(node->left) - getDepth(node->right)) > 1)
                 return false;
 
             // 左右孩子入栈
