@@ -12,8 +12,9 @@ public:
     }
     void get_next(const std::string &T, std::vector<int> &next) {
         int i = 1, j = 0;
-        next[0] = 0;
-        int len  = T.length();
+        int len = next.size();
+        if (len > 0) next[0] = 0;
+        if (len > 1) next[1] = 0;
 
         while (i < len - 1) {
             if (T[i] == T[j]) {
