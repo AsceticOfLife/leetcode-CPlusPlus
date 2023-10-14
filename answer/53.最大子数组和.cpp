@@ -7,6 +7,7 @@
 // @lc code=start
 class Solution {
 public:
+    // 贪心算法
     int maxSubArray(vector<int>& nums) {
         int result = INT32_MIN;
         int count = 0;
